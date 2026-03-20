@@ -20,7 +20,6 @@
   }
   body { font-family:'DM Sans',sans-serif; background:var(--navy); min-height:100vh; color:var(--text-dark); overflow-x:hidden; }
 
-  /* HERO */
   .hero { background:linear-gradient(160deg,#0F1F3D 0%,#1A3260 50%,#0D1830 100%); padding:0 20px 60px; text-align:center; position:relative; overflow:hidden; }
   .hero::before { content:''; position:absolute; inset:0; background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Ccircle cx='30' cy='30' r='1' fill='%23C9922A' opacity='0.12'/%3E%3C/svg%3E") repeat; pointer-events:none; }
   .hero-inner { max-width:720px; margin:0 auto; position:relative; z-index:1; }
@@ -45,17 +44,10 @@
   .btn-primary:hover { background:var(--gold-light); transform:translateY(-1px); }
   .btn-secondary { background:rgba(255,255,255,0.08); color:#fff; border:1.5px solid rgba(255,255,255,0.2); padding:14px 30px; border-radius:10px; font-family:'DM Sans',sans-serif; font-size:15px; font-weight:500; cursor:pointer; transition:all 0.2s; }
   .btn-secondary:hover { background:rgba(255,255,255,0.14); }
-  .hero-stats { display:flex; justify-content:center; margin-top:56px; border-top:1px solid rgba(255,255,255,0.08); padding-top:40px; flex-wrap:wrap; }
-  .hero-stat { flex:1; min-width:100px; max-width:200px; padding:0 24px; border-right:1px solid rgba(255,255,255,0.08); text-align:center; }
-  .hero-stat:last-child { border-right:none; }
-  .hero-stat-num { font-family:'Playfair Display',serif; font-size:32px; color:var(--gold-light); font-weight:600; }
-  .hero-stat-label { font-size:12px; color:rgba(255,255,255,0.4); margin-top:4px; text-transform:uppercase; letter-spacing:0.07em; }
 
-  /* MAIN */
   .main { background:var(--cream); min-height:100vh; }
   .main-inner { max-width:900px; margin:0 auto; padding:60px 20px 100px; }
 
-  /* TABS */
   .tab-bar { display:flex; background:var(--navy); border-radius:var(--r-lg); padding:6px; gap:4px; margin-bottom:48px; box-shadow:var(--shadow-lg); flex-wrap:wrap; }
   .tab-btn { flex:1; min-width:90px; padding:13px 8px; border-radius:10px; border:none !important; background:transparent !important; font-family:'DM Sans',sans-serif !important; font-size:13px !important; font-weight:600 !important; color:#ffffff !important; cursor:pointer; transition:all 0.2s; white-space:nowrap; opacity:0.65; }
   .tab-btn:hover { opacity:1; background:rgba(255,255,255,0.1) !important; }
@@ -70,7 +62,6 @@
   .card { background:#fff; border-radius:var(--r-lg); border:1px solid var(--border); padding:32px 36px; box-shadow:var(--shadow); margin-bottom:20px; }
   @media(max-width:600px){ .card { padding:20px 16px; } }
 
-  /* FORMS */
   .form-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:20px; }
   @media(max-width:600px){ .form-grid { grid-template-columns:1fr; } }
   .form-group { display:flex; flex-direction:column; gap:6px; }
@@ -92,16 +83,13 @@
   .submit-btn.gold:hover:not(:disabled) { background:var(--gold-light); }
   .submit-btn.danger { background:var(--red); color:#fff; }
 
-  /* SPINNER */
   .spinner { display:inline-block; width:14px; height:14px; border:2px solid rgba(255,255,255,0.3); border-top-color:#fff; border-radius:50%; animation:spin 0.7s linear infinite; vertical-align:middle; margin-right:6px; }
   .spinner.dark { border-color:rgba(0,0,0,0.12); border-top-color:var(--gold); }
   @keyframes spin { to { transform:rotate(360deg); } }
 
-  /* BOXES */
   .info-box { background:var(--gold-pale); border:1px solid rgba(201,146,42,0.25); border-radius:10px; padding:12px 16px; font-size:14px; color:var(--text-mid); margin-bottom:20px; line-height:1.6; }
   .info-box strong { color:var(--text-dark); }
 
-  /* ID LOOKUP */
   .id-wrap { position:relative; }
   .id-status { position:absolute; right:12px; top:50%; transform:translateY(-50%); font-size:15px; pointer-events:none; }
   .verified-box { display:none; background:#F0FAF4; border:1.5px solid var(--green); border-radius:9px; padding:10px 14px; margin-top:8px; font-size:14px; color:#1A5C38; align-items:center; gap:8px; }
@@ -109,22 +97,13 @@
   .err-box { display:none; background:#FFF0F0; border:1.5px solid var(--red); border-radius:9px; padding:10px 14px; margin-top:8px; font-size:14px; color:#7A1F1F; }
   .err-box.show { display:block; }
 
-  /* SUCCESS CARD */
   .success-card { background:linear-gradient(135deg,#0F1F3D,#1A3260); border-radius:var(--r-lg); padding:40px; text-align:center; display:none; }
   .success-card h3 { font-family:'Playfair Display',serif; font-size:24px; color:#fff; margin-bottom:10px; }
   .success-card p { color:rgba(255,255,255,0.6); font-size:15px; margin-bottom:16px; }
   .uid-badge { display:inline-block; background:rgba(201,146,42,0.2); border:1.5px solid var(--gold); color:var(--gold-light); font-size:20px; font-weight:600; letter-spacing:0.1em; padding:10px 24px; border-radius:10px; margin:4px; }
 
-  /* WEEK BADGE */
   .week-badge { display:inline-flex; align-items:center; gap:8px; background:var(--navy); color:var(--gold-light); border-radius:8px; padding:8px 16px; font-size:13px; font-weight:500; margin-bottom:24px; }
 
-  /* CHECKIN */
-  .ci-group-confirm { background:#F0FAF4; border:1.5px solid var(--green); border-radius:12px; padding:16px 20px; margin-bottom:20px; display:none; }
-  .ci-group-confirm.show { display:block; }
-  .ci-group-name { font-size:17px; font-weight:600; color:var(--navy); margin-bottom:2px; }
-  .ci-group-meta { font-size:13px; color:var(--text-soft); }
-
-  /* TRANSFER */
   .transfer-section { border-top:1px solid var(--border); margin-top:28px; padding-top:24px; }
   .transfer-toggle { display:flex; align-items:center; gap:10px; cursor:pointer; color:var(--red); font-size:14px; font-weight:500; background:none; border:1.5px solid rgba(194,59,59,0.3); border-radius:9px; padding:10px 16px; width:100%; justify-content:center; transition:all 0.2s; }
   .transfer-toggle:hover { background:#FFF0F0; }
@@ -132,40 +111,27 @@
   .transfer-form.show { display:block; }
   .transfer-warning { background:#FFF0F0; border:1px solid rgba(194,59,59,0.25); border-radius:9px; padding:12px 16px; font-size:13px; color:#7A1F1F; margin-bottom:16px; line-height:1.6; }
 
-  /* CONFIRM GRID */
   .confirm-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin:16px 0; }
   .confirm-cell { background:var(--cream); border-radius:9px; padding:12px 16px; }
   .confirm-label { font-size:11px; color:var(--text-soft); text-transform:uppercase; letter-spacing:0.07em; margin-bottom:3px; }
   .confirm-value { font-size:15px; font-weight:600; color:var(--navy); }
 
-  /* SUCCESS */
   .checkin-success { text-align:center; padding:20px 0; display:none; }
   .checkin-success h3 { font-family:'Playfair Display',serif; font-size:22px; color:var(--navy); margin:12px 0 6px; }
   .checkin-success p { color:var(--text-soft); font-size:14px; }
   .btn-outline { background:transparent; border:1.5px solid #E8E0D0; color:var(--navy); width:100%; padding:12px; border-radius:10px; font-family:'DM Sans',sans-serif; font-size:14px; font-weight:500; cursor:pointer; margin-top:8px; transition:all 0.2s; }
   .btn-outline:hover { border-color:var(--navy); }
 
-  /* SECTION LABEL */
   .section-label { font-size:11px; font-weight:600; color:var(--text-soft); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:14px; }
 
-
-  .board-week-head { display:flex; align-items:center; justify-content:space-between; margin-bottom:20px; flex-wrap:wrap; gap:12px; }
-  .board-week-head h3 { font-family:'Playfair Display',serif; font-size:20px; color:var(--navy); }
-  .live-dot { display:inline-flex; align-items:center; gap:6px; font-size:12px; color:var(--green); font-weight:500; }
-  .live-dot::before { content:''; width:7px; height:7px; border-radius:50%; background:var(--green); display:inline-block; animation:pulse 2s infinite; }
-  @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(1.3)} }
-
-  /* TOAST */
   .toast { position:fixed; bottom:24px; right:24px; background:var(--navy); color:#fff; border-radius:12px; padding:13px 18px; font-size:14px; font-weight:500; box-shadow:var(--shadow-lg); border-left:4px solid var(--gold); transform:translateY(80px); opacity:0; transition:all 0.35s cubic-bezier(0.34,1.56,0.64,1); z-index:1000; max-width:320px; }
   .toast.show { transform:translateY(0); opacity:1; }
   .toast.error { border-left-color:var(--red); }
   .toast.success { border-left-color:var(--green); }
-  .divider { border:none; border-top:1px solid var(--border); margin:24px 0; }
 </style>
 </head>
 <body>
 
-<!-- HERO -->
 <div class="hero">
   <div class="hero-inner">
     <nav class="nav">
@@ -175,7 +141,6 @@
       </div>
       <div class="nav-links">
         <button class="nav-btn outline" onclick="setTab('register')">Register</button>
-        <button class="nav-btn outline" onclick="setTab('checkin')">Check-In</button>
         <button class="nav-btn filled" onclick="setTab('checkin')">Check-In</button>
       </div>
     </nav>
@@ -186,20 +151,17 @@
       <button class="btn-primary" onclick="setTab('register')">Register as a Leader</button>
       <button class="btn-secondary" onclick="setTab('checkin')">Weekly Check-In</button>
     </div>
-
   </div>
 </div>
 
-<!-- MAIN -->
 <div class="main">
   <div class="main-inner">
     <div class="tab-bar">
-      <button class="tab-btn active" id="tab-register"    onclick="setTab('register')">✦ Register</button>
-      <button class="tab-btn"        id="tab-checkin"     onclick="setTab('checkin')">📋 Check-In</button>
-      <button class="tab-btn"        id="tab-addgroup"    onclick="setTab('addgroup')">➕ Add Group</button>
+      <button class="tab-btn active" id="tab-register" onclick="setTab('register')">✦ Register</button>
+      <button class="tab-btn" id="tab-checkin" onclick="setTab('checkin')">📋 Check-In</button>
+      <button class="tab-btn" id="tab-addgroup" onclick="setTab('addgroup')">➕ Add Group</button>
     </div>
 
-    <!-- REGISTER -->
     <div class="panel active" id="panel-register">
       <div class="section-head">
         <div class="gold-line"></div>
@@ -215,7 +177,8 @@
           <div class="form-group"><label>Phone Number</label><input type="text" id="reg-phone" placeholder="+1 (555) 000-0000"></div>
           <div class="form-group">
             <label>Country *</label>
-            <select id="reg-country"><option value="">Select country...</option>
+            <select id="reg-country">
+              <option value="">Select country...</option>
               <option>United States</option><option>United Kingdom</option><option>Canada</option><option>Australia</option>
               <option>Nigeria</option><option>Kenya</option><option>South Africa</option><option>Ghana</option>
               <option>Uganda</option><option>Tanzania</option><option>Rwanda</option><option>Ethiopia</option>
@@ -227,15 +190,24 @@
             </select>
           </div>
           <div class="form-group"><label>City *</label><input type="text" id="reg-city" placeholder="Your city"></div>
-          <div class="form-group"><label>Referred By (Leader ID)</label><input type="text" id="reg-referral" placeholder="BLG-00001"><span class="field-hint">Leave blank if no referral</span></div>
-          <div class="form-group"><label>First Group Name</label><input type="text" id="reg-groupname" placeholder="e.g. Accra Morning Group"><span class="field-hint">Leave blank to use your name</span></div>
+          <div class="form-group">
+            <label>Referred By (Group ID)</label>
+            <input type="text" id="reg-referral" placeholder="BLG-00001">
+            <span class="field-hint">Enter the Group ID of the leader who trained you. Leave blank if none.</span>
+          </div>
+          <div class="form-group">
+            <label>First Group Name</label>
+            <input type="text" id="reg-groupname" placeholder="e.g. Accra Morning Group">
+            <span class="field-hint">Leave blank to use your name.</span>
+          </div>
         </div>
         <button class="submit-btn gold" id="reg-btn" onclick="submitRegistration()">Register as a BLG Leader →</button>
       </div>
+
       <div class="success-card" id="reg-success">
         <div style="font-size:44px;margin-bottom:14px">✦</div>
         <h3>Welcome to the BLG Network!</h3>
-        <p>Your registration is confirmed. Save both IDs — use your <strong style="color:var(--gold-light)">Group ID</strong> each week for check-ins.</p>
+        <p>Your registration is confirmed. Save both IDs — use your <strong style="color:var(--gold-light)">Leader ID</strong> to add future groups, and your <strong style="color:var(--gold-light)">Group ID</strong> each week for check-ins.</p>
         <div style="margin-bottom:12px">
           <div style="font-size:11px;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:6px">Your Leader ID</div>
           <div class="uid-badge" id="reg-leader-uid">BLG-00000</div>
@@ -249,7 +221,6 @@
       </div>
     </div>
 
-    <!-- CHECK-IN -->
     <div class="panel" id="panel-checkin">
       <div class="section-head">
         <div class="gold-line"></div>
@@ -277,6 +248,7 @@
               ❌ Group ID not found in the BLG registry. Please check your ID or <a style="color:#8B2020;cursor:pointer;text-decoration:underline" onclick="setTab('register')">register a new group</a>.
             </div>
           </div>
+
           <div id="ci-attendance" style="display:none">
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px">
               <div class="form-group">
@@ -290,6 +262,7 @@
             </div>
             <button class="submit-btn gold" id="ci-btn" onclick="submitCheckin()">Submit Weekly Check-In →</button>
             <p style="font-size:13px;color:var(--text-soft);margin-top:12px;text-align:center">Not your group? <a style="color:var(--gold);cursor:pointer;text-decoration:underline" onclick="resetCheckin()">Use a different Group ID</a></p>
+
             <div class="transfer-section">
               <button class="transfer-toggle" onclick="toggleTransfer()">↗ Transfer Leadership of This Group</button>
               <div class="transfer-form" id="transfer-form">
@@ -302,7 +275,8 @@
                   <div class="form-group"><label>Phone Number</label><input type="text" id="tr-phone" placeholder="+1 (555) 000-0000"></div>
                   <div class="form-group">
                     <label>Country *</label>
-                    <select id="tr-country"><option value="">Select country...</option>
+                    <select id="tr-country">
+                      <option value="">Select country...</option>
                       <option>United States</option><option>United Kingdom</option><option>Canada</option><option>Australia</option>
                       <option>Nigeria</option><option>Kenya</option><option>South Africa</option><option>Ghana</option>
                       <option>Uganda</option><option>Tanzania</option><option>Rwanda</option><option>Ethiopia</option>
@@ -320,6 +294,7 @@
             </div>
           </div>
         </div>
+
         <div class="checkin-success" id="ci-success">
           <div style="font-size:48px">🙏</div>
           <h3>Check-In Recorded!</h3>
@@ -330,9 +305,9 @@
             <div class="confirm-cell"><div class="confirm-label">Meeting Date</div><div class="confirm-value" id="ci-conf-date">—</div></div>
             <div class="confirm-cell"><div class="confirm-label">Week</div><div class="confirm-value" id="ci-conf-week">—</div></div>
           </div>
-          
           <button class="btn-outline" onclick="resetCheckin()">Log Another Group</button>
         </div>
+
         <div class="checkin-success" id="tr-success">
           <div style="font-size:48px">✦</div>
           <h3>Group Transferred!</h3>
@@ -347,7 +322,6 @@
       </div>
     </div>
 
-    <!-- ADD GROUP -->
     <div class="panel" id="panel-addgroup">
       <div class="section-head">
         <div class="gold-line"></div>
@@ -365,12 +339,14 @@
           <div class="verified-box" id="ag-verified"><span>✅</span><div>Leader verified: <strong id="ag-verified-name">—</strong></div></div>
           <div class="err-box" id="ag-error">❌ Leader ID not found. <a style="color:#8B2020;cursor:pointer;text-decoration:underline" onclick="setTab('register')">Register first</a>.</div>
         </div>
+
         <div id="ag-form" style="display:none">
           <div class="form-grid">
             <div class="form-group"><label>Group Name *</label><input type="text" id="ag-name" placeholder="e.g. Lagos Evening Group"></div>
             <div class="form-group">
               <label>Country *</label>
-              <select id="ag-country"><option value="">Same as my country...</option>
+              <select id="ag-country">
+                <option value="">Same as my country...</option>
                 <option>United States</option><option>United Kingdom</option><option>Canada</option><option>Australia</option>
                 <option>Nigeria</option><option>Kenya</option><option>South Africa</option><option>Ghana</option>
                 <option>Uganda</option><option>Tanzania</option><option>Rwanda</option><option>Ethiopia</option>
@@ -385,6 +361,7 @@
           </div>
           <button class="submit-btn gold" id="ag-btn" onclick="submitAddGroup()">Create New Group →</button>
         </div>
+
         <div class="success-card" id="ag-success" style="margin-top:16px">
           <div style="font-size:40px;margin-bottom:12px">✦</div>
           <h3>New Group Created!</h3>
@@ -395,23 +372,45 @@
         </div>
       </div>
     </div>
-    </div>
   </div>
+</div>
 
 <div class="toast" id="toast"></div>
 
 <script>
-// ── GOOGLE APPS SCRIPT ENDPOINT ──
-const API = 'https://script.google.com/macros/s/AKfycbwfPc0-Kb77qlCH4-4NX2f0C6vuaFPH1Cb2HQwV6Wh4xm7-6KCdpcym1Bz0g9C8qKm0SA/exec';
+const API = 'https://script.google.com/macros/s/AKfycbxmSUtTk50by7M-Y3-RuTrRlnUjw42UwsFDm2PavJmmsp9cbDoh2_qdVLL7IvpFjisB9A/exec';
 
 function getSession(){ try{return JSON.parse(localStorage.getItem('blg_s'))||{};}catch(e){return{};} }
 function setSession(d){ try{localStorage.setItem('blg_s',JSON.stringify(d));}catch(e){} }
-async function apiPost(p){ const r=await fetch(API,{method:'POST',body:JSON.stringify(p),headers:{'Content-Type':'text/plain'}}); return r.json(); }
-async function apiGet(p){ const r=await fetch(`${API}?${new URLSearchParams(p)}`); return r.json(); }
+
+async function apiPost(p) {
+  const r = await fetch(API, {
+    method: 'POST',
+    body: JSON.stringify(p),
+    headers: { 'Content-Type': 'text/plain' }
+  });
+  const text = await r.text();
+  try {
+    return JSON.parse(text);
+  } catch (e) {
+    console.error('POST raw response:', text);
+    throw new Error('Invalid JSON response from server');
+  }
+}
+
+async function apiGet(p) {
+  const r = await fetch(`${API}?${new URLSearchParams(p)}`);
+  const text = await r.text();
+  try {
+    return JSON.parse(text);
+  } catch (e) {
+    console.error('GET raw response:', text);
+    throw new Error('Invalid JSON response from server');
+  }
+}
 
 function getWeekKey(ds){ const p=ds.split('-'); const d=new Date(+p[0],+p[1]-1,+p[2]); const day=d.getDay(); const mon=new Date(d); mon.setDate(d.getDate()-((day+6)%7)); const j=new Date(mon.getFullYear(),0,1); return `${mon.getFullYear()}-W${String(Math.ceil(((mon-j)/86400000+j.getDay()+1)/7)).padStart(2,'0')}`; }
 function todayStr(){ const t=new Date(); return `${t.getFullYear()}-${String(t.getMonth()+1).padStart(2,'0')}-${String(t.getDate()).padStart(2,'0')}`; }
-function getCurrentWeekKey(){ return getWeekKey(todayStr()); }
 function getWeekRange(){ const t=new Date(); const d=t.getDay(); const mon=new Date(t); mon.setDate(t.getDate()-((d+6)%7)); const sun=new Date(mon); sun.setDate(mon.getDate()+6); const f=x=>x.toLocaleDateString('en-US',{month:'short',day:'numeric'}); return `${f(mon)} – ${f(sun)}, ${sun.getFullYear()}`; }
 function fmtDate(s){ const p=s.split('-'); return new Date(+p[0],+p[1]-1,+p[2]).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}); }
 
@@ -423,40 +422,73 @@ function setTab(t){
   if(t==='checkin'){
     document.getElementById('current-week-label').textContent=getWeekRange();
     if(!document.getElementById('ci-date').value) document.getElementById('ci-date').value=todayStr();
-    const s=getSession(); if(s.lastGroupUid){ const el=document.getElementById('ci-group-uid'); el.value=s.lastGroupUid; onGroupUidInput(el); }
+    const s=getSession();
+    if(s.lastGroupUid){
+      const el=document.getElementById('ci-group-uid');
+      el.value=s.lastGroupUid;
+      onGroupUidInput(el);
+    }
   }
 }
 
-// REGISTER
 async function submitRegistration(){
   const first=document.getElementById('reg-first').value.trim();
   const last=document.getElementById('reg-last').value.trim();
   const email=document.getElementById('reg-email').value.trim();
   const country=document.getElementById('reg-country').value;
   const city=document.getElementById('reg-city').value.trim();
+
   if(!first||!last||!email||!country||!city){showToast('Please fill in all required fields.','error');return;}
   if(!email.includes('@')){showToast('Please enter a valid email.','error');return;}
+
   const btn=document.getElementById('reg-btn');
-  btn.disabled=true; btn.innerHTML='<span class="spinner"></span>Registering...';
+  btn.disabled=true;
+  btn.innerHTML='<span class="spinner"></span>Registering...';
+
   try{
-    const r=await apiPost({type:'registration',first,last,email,phone:document.getElementById('reg-phone').value.trim(),country,city,referral:document.getElementById('reg-referral').value.trim().toUpperCase(),groupName:document.getElementById('reg-groupname').value.trim()});
+    const r=await apiPost({
+      type:'registration',
+      first,
+      last,
+      email,
+      phone:document.getElementById('reg-phone').value.trim(),
+      country,
+      city,
+      referral:document.getElementById('reg-referral').value.trim().toUpperCase(),
+      groupName:document.getElementById('reg-groupname').value.trim()
+    });
+
     if(r.success){
-      const s=getSession(); s.leaderUid=r.leaderUid; s.lastGroupUid=r.groupUid; setSession(s);
+      const s=getSession();
+      s.leaderUid=r.leaderUid;
+      s.lastGroupUid=r.groupUid;
+      setSession(s);
+
       document.getElementById('reg-form-card').style.display='none';
       document.getElementById('reg-success').style.display='block';
       document.getElementById('reg-leader-uid').textContent=r.leaderUid;
       document.getElementById('reg-group-uid').textContent=r.groupUid;
     } else if(r.error==='EMAIL_EXISTS'){
       showToast('This email is already registered.','error');
-      btn.disabled=false; btn.innerHTML='Register as a BLG Leader →';
-    } else { throw new Error(r.error||'Registration failed'); }
-  }catch(err){ showToast('Connection error. Please try again.','error'); btn.disabled=false; btn.innerHTML='Register as a BLG Leader →'; }
+      btn.disabled=false;
+      btn.innerHTML='Register as a BLG Leader →';
+    } else {
+      throw new Error(r.error||'Registration failed');
+    }
+  } catch(err){
+    console.error(err);
+    showToast('Connection error. Please try again.','error');
+    btn.disabled=false;
+    btn.innerHTML='Register as a BLG Leader →';
+  }
 }
 
-// CHECK-IN
-let ciTimer=null; let verifiedGroup=null;
+let ciTimer=null;
+let verifiedGroup=null;
+
 function onGroupUidInput(input){
-  const val=input.value.trim().toUpperCase(); input.value=val;
+  const val=input.value.trim().toUpperCase();
+  input.value=val;
   clearTimeout(ciTimer);
   input.classList.remove('field-ok','field-error');
   document.getElementById('ci-group-icon').textContent='';
@@ -467,6 +499,7 @@ function onGroupUidInput(input){
   if(!val||val.length<8) return;
   ciTimer=setTimeout(()=>lookupGroup(val),500);
 }
+
 function verifyGroupNow(){
   const input=document.getElementById('ci-group-uid');
   const val=input.value.trim().toUpperCase();
@@ -497,8 +530,13 @@ async function lookupGroup(val){
       document.getElementById('ci-group-error').classList.add('show');
       document.getElementById('ci-attendance').style.display='none';
     }
-  }catch(e){ icon.textContent='⚠️'; showToast('Could not reach registry.','error'); }
+  }catch(e){
+    console.error(e);
+    icon.textContent='⚠️';
+    showToast('Could not reach registry.','error');
+  }
 }
+
 function resetCheckin(){
   document.getElementById('ci-main').style.display='block';
   document.getElementById('ci-success').style.display='none';
@@ -511,21 +549,34 @@ function resetCheckin(){
   document.getElementById('ci-attendance').style.display='none';
   document.getElementById('transfer-form').classList.remove('show');
   document.getElementById('ci-count').value='';
+  document.getElementById('tr-first').value='';
+  document.getElementById('tr-last').value='';
+  document.getElementById('tr-email').value='';
+  document.getElementById('tr-phone').value='';
+  document.getElementById('tr-country').value='';
+  document.getElementById('tr-city').value='';
   verifiedGroup=null;
 }
+
 async function submitCheckin(){
   if(!verifiedGroup){showToast('Please verify your Group ID first.','error');return;}
   const count=parseInt(document.getElementById('ci-count').value,10);
   const date=document.getElementById('ci-date').value;
   if(!count||count<1){showToast('Please enter attendee count.','error');return;}
   if(!date){showToast('Please select a meeting date.','error');return;}
+
   const btn=document.getElementById('ci-btn');
-  btn.disabled=true; btn.innerHTML='<span class="spinner"></span>Submitting...';
+  btn.disabled=true;
+  btn.innerHTML='<span class="spinner"></span>Submitting...';
   const weekKey=getWeekKey(date);
+
   try{
     const r=await apiPost({type:'checkin',uid:verifiedGroup.groupUid,count,date,week:weekKey});
     if(r.success){
-      const s=getSession(); s.lastGroupUid=verifiedGroup.groupUid; setSession(s);
+      const s=getSession();
+      s.lastGroupUid=verifiedGroup.groupUid;
+      setSession(s);
+
       document.getElementById('ci-conf-uid').textContent=verifiedGroup.groupUid;
       document.getElementById('ci-conf-count').textContent=count+' people';
       document.getElementById('ci-conf-date').textContent=fmtDate(date);
@@ -533,24 +584,51 @@ async function submitCheckin(){
       document.getElementById('ci-main').style.display='none';
       document.getElementById('ci-success').style.display='block';
       showToast('Check-in saved! 🙏','success');
-    } else { throw new Error(r.error); }
-  }catch(e){ showToast('Error saving. Please try again.','error'); }
-  btn.disabled=false; btn.innerHTML='Submit Weekly Check-In →';
+    } else {
+      throw new Error(r.error);
+    }
+  }catch(e){
+    console.error(e);
+    showToast('Error saving. Please try again.','error');
+  }
+
+  btn.disabled=false;
+  btn.innerHTML='Submit Weekly Check-In →';
 }
-function toggleTransfer(){ document.getElementById('transfer-form').classList.toggle('show'); }
+
+function toggleTransfer(){
+  document.getElementById('transfer-form').classList.toggle('show');
+}
+
 async function submitTransfer(){
   if(!verifiedGroup){showToast('No group selected.','error');return;}
+
   const first=document.getElementById('tr-first').value.trim();
   const last=document.getElementById('tr-last').value.trim();
   const email=document.getElementById('tr-email').value.trim();
   const country=document.getElementById('tr-country').value;
   const city=document.getElementById('tr-city').value.trim();
+
   if(!first||!last||!email||!country||!city){showToast('Please fill in all new leader fields.','error');return;}
   if(!email.includes('@')){showToast('Please enter a valid email for the new leader.','error');return;}
+
   const btn=document.getElementById('tr-btn');
-  btn.disabled=true; btn.innerHTML='<span class="spinner"></span>Transferring...';
+  btn.disabled=true;
+  btn.innerHTML='<span class="spinner"></span>Transferring...';
+
   try{
-    const r=await apiPost({type:'transfer',groupUid:verifiedGroup.groupUid,fromLeaderUid:verifiedGroup.leaderUid,newFirst:first,newLast:last,newEmail:email,newPhone:document.getElementById('tr-phone').value.trim(),newCountry:country,newCity:city});
+    const r=await apiPost({
+      type:'transfer',
+      groupUid:verifiedGroup.groupUid,
+      fromLeaderUid:verifiedGroup.leaderUid,
+      newFirst:first,
+      newLast:last,
+      newEmail:email,
+      newPhone:document.getElementById('tr-phone').value.trim(),
+      newCountry:country,
+      newCity:city
+    });
+
     if(r.success){
       document.getElementById('tr-conf-uid').textContent=verifiedGroup.groupUid;
       document.getElementById('tr-conf-new-uid').textContent=r.newLeaderUid;
@@ -560,15 +638,24 @@ async function submitTransfer(){
       showToast('Group transferred! ✦','success');
     } else if(r.error==='EMAIL_EXISTS'){
       showToast('That email is already registered as a leader.','error');
-    } else { throw new Error(r.error); }
-  }catch(e){ showToast('Transfer error. Please try again.','error'); }
-  btn.disabled=false; btn.innerHTML='Confirm Transfer of Leadership →';
+    } else {
+      throw new Error(r.error);
+    }
+  }catch(e){
+    console.error(e);
+    showToast('Transfer error. Please try again.','error');
+  }
+
+  btn.disabled=false;
+  btn.innerHTML='Confirm Transfer of Leadership →';
 }
 
-// ADD GROUP
-let agTimer=null; let agVerifiedUid=null;
+let agTimer=null;
+let agVerifiedUid=null;
+
 function onAgUidInput(input){
-  const val=input.value.trim().toUpperCase(); input.value=val;
+  const val=input.value.trim().toUpperCase();
+  input.value=val;
   clearTimeout(agTimer);
   input.classList.remove('field-ok','field-error');
   document.getElementById('ag-icon').textContent='';
@@ -601,41 +688,71 @@ async function lookupAgLeader(val){
       document.getElementById('ag-error').classList.add('show');
       document.getElementById('ag-form').style.display='none';
     }
-  }catch(e){ icon.textContent='⚠️'; }
+  }catch(e){
+    console.error(e);
+    icon.textContent='⚠️';
+    showToast('Could not verify leader ID.','error');
+  }
 }
+
 async function submitAddGroup(){
   if(!agVerifiedUid){showToast('Please verify your Leader ID first.','error');return;}
+
   const name=document.getElementById('ag-name').value.trim();
   if(!name){showToast('Please enter a group name.','error');return;}
+
   const btn=document.getElementById('ag-btn');
-  btn.disabled=true; btn.innerHTML='<span class="spinner"></span>Creating...';
+  btn.disabled=true;
+  btn.innerHTML='<span class="spinner"></span>Creating...';
+
   try{
-    const r=await apiPost({type:'addGroup',leaderUid:agVerifiedUid,groupName:name,country:document.getElementById('ag-country').value||'',city:document.getElementById('ag-city').value.trim()});
+    const r=await apiPost({
+      type:'addGroup',
+      leaderUid:agVerifiedUid,
+      groupName:name,
+      country:document.getElementById('ag-country').value||'',
+      city:document.getElementById('ag-city').value.trim()
+    });
+
     if(r.success){
       document.getElementById('ag-form').style.display='none';
       document.getElementById('ag-success').style.display='block';
       document.getElementById('ag-new-uid').textContent=r.groupUid;
-      const s=getSession(); s.lastGroupUid=r.groupUid; setSession(s);
-    } else { throw new Error(r.error); }
-  }catch(e){ showToast('Error creating group.','error'); }
-  btn.disabled=false; btn.innerHTML='Create New Group →';
+      const s=getSession();
+      s.lastGroupUid=r.groupUid;
+      setSession(s);
+    } else {
+      throw new Error(r.error);
+    }
+  }catch(e){
+    console.error(e);
+    showToast('Error creating group.','error');
+  }
+
+  btn.disabled=false;
+  btn.innerHTML='Create New Group →';
 }
+
 function resetAddGroup(){
   document.getElementById('ag-success').style.display='none';
   document.getElementById('ag-form').style.display='block';
   document.getElementById('ag-name').value='';
+  document.getElementById('ag-country').value='';
+  document.getElementById('ag-city').value='';
 }
 
 function showToast(msg,type=''){
-  const t=document.getElementById('toast'); t.textContent=msg;
-  t.className='toast'+(type?' '+type:''); t.classList.add('show');
+  const t=document.getElementById('toast');
+  t.textContent=msg;
+  t.className='toast'+(type?' '+type:'');
+  t.classList.add('show');
   setTimeout(()=>t.classList.remove('show'),3500);
 }
 
-// INIT
 document.getElementById('current-week-label').textContent=getWeekRange();
 document.getElementById('ci-date').value=todayStr();
-const _s=getSession(); if(_s.lastGroupUid) document.getElementById('ci-group-uid').value=_s.lastGroupUid;
+const _s=getSession();
+if(_s.lastGroupUid) document.getElementById('ci-group-uid').value=_s.lastGroupUid;
 </script>
 </body>
 </html>
